@@ -71,10 +71,7 @@
 
 <div class="root">
 	<img alt="Nastia Avatar" src={nastiaAvatar} class="avatar" />
-	<h1>When next should you feed me?</h1>
-	<p>
-		Approximate time: {nextFeed}
-	</p>
+	<h1>When next should you feed me? <span class="time">{nextFeed}</span></h1>
 	{#await monthDataInPromise}
 		<p>...Loading</p>
 	{:then feedingAnalytics}
@@ -121,6 +118,10 @@
 		border-radius: 50%;
 	}
 
+	.time {
+		color: red;
+	}
+
 	.boxes {
 		margin: 10px auto;
 		display: flex;
@@ -152,8 +153,9 @@
 	}
 
 	.feeding-result h4 {
-		border-radius: 2px;
+		border-radius: 10px;
 		background-color: #ebebeb;
+		padding: 20px 30px;
 	}
 
 	.log-time {
