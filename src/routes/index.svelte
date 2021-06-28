@@ -6,9 +6,6 @@
 	import { onMount } from 'svelte';
 	import { getMonthData, updatFed, formatTime } from '../functions';
 
-	let nastiaAvatar =
-		'https://lh3.googleusercontent.com/9sCqRVBb0epX8u139nARgAuH-NkGoncyCn-xtERFjGyyXA6SHifSdlOXA7Sx8k4cB0Ljm9Ag9OKJXh3OFw64S5c95OHvebGFCJsf73L4p7gKeLcTqxlnbB7iGPqf6R_2g7Vyh5hRBMw_OF462zp1JLYtwFvDFlyJOdwAxglILND_Xl11kRKrwDgi77uHbCrKAP-b-LC92h_JMmYe1Fu4Tb-n_dEF4Eh2Qy9iSebHQX8suRRBb9JjUNvUdV4m1v9A2Y4_xd_Z4vXe1bc-mVSq8uj-I72MvUXdL3yHPpga9eBtXPvOolSThUF7qrQpKhLaNYOcHuWpUlLrR42bGq35j77PBN74cTrodEVZLLI5d8d6goTQYAd2baa2aX14OFi6sUbTKyGlrPJL-08XXDNopfGiq0flTuxxSKxRHDAUWi4zU-93g96C4vS25MYRqKGT49VGmM1ffTDESwfaAFx8Y18ZoPpJHAe5VXiDnuZF0hg6jb3MhSBq63tsVhPqJrOPh4qwJILw59VqArovLnZU52arUOMI-DIs7UkVFdYzZ4szDwfaOjjjqU7_5nonNiSQ0AKTYIX9-s2NVlU10yENic_BrScPPU7Irmq2qIgN_p0uu88-9yAdEnBcJ3X8SXzdX_iQpmubUi4D6p-mdqGCjv3A1hclW7b_ihCLthKbV6cppIdezHFvO-Pl8NUZ9F6nKEATLvVEbeXIGN-ry9eE_EUt-A=w2228-h1576-no?authuser=0';
-
 	// Local state
 	let selectedDay = new Date().toDateString();
 	let feedingAnalytics;
@@ -70,7 +67,7 @@
 </svelte:head>
 
 <div class="root">
-	<img alt="Nastia Avatar" src={nastiaAvatar} class="avatar" />
+	<img alt="Nastia Avatar" src="/icon-512x512.png" class="avatar" />
 	<h1>When next should you feed me? <span class="time">{nextFeed}</span></h1>
 	{#await monthDataInPromise}
 		<p>...Loading</p>
